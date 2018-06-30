@@ -1,0 +1,30 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+
+
+<?import javafx.scene.control.PasswordField?>
+<VBox fx:controller="java_level_2.homework_07.sample.Controller"
+      xmlns:fx="http://javafx.com/fxml" alignment="center">
+
+    <HBox fx:id="upperPanel">
+        <TextField HBox.hgrow="ALWAYS" promptText="Логин" fx:id="loginField"/>
+        <PasswordField promptText="Пароль" fx:id="passwordField" onAction="#tryToAuth"/>
+        <Button text="Авторизоваться" onAction="#tryToAuth"/>
+    </HBox>
+
+
+    <TextArea fx:id="textAreaFields"  editable="false" VBox.vgrow="ALWAYS"/>
+
+    <HBox fx:id="bottomPanel" managed="false" visible="false">
+        <TextField  fx:id="textFields" HBox.hgrow="ALWAYS" onAction="#sendMsg" promptText="Введите сообщение..."/>
+        <Button fx:id="btn" onAction="#sendMsg" text="Send Msg"/>
+    </HBox>
+
+</VBox>
+
